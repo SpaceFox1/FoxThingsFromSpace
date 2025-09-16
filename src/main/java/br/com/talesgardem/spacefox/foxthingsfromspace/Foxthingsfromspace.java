@@ -6,11 +6,10 @@ import br.com.talesgardem.spacefox.foxthingsfromspace.entities.ModEntities;
 import br.com.talesgardem.spacefox.foxthingsfromspace.entities.client.lion.LionRenderer;
 import br.com.talesgardem.spacefox.foxthingsfromspace.items.ModCreativeModeTabs;
 import br.com.talesgardem.spacefox.foxthingsfromspace.items.ModItems;
+import br.com.talesgardem.spacefox.foxthingsfromspace.sound.ModSounds;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.entity.EntityRenderers;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.level.block.Blocks;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -40,6 +39,7 @@ public class Foxthingsfromspace {
         ModCreativeModeTabs.register(modEventBus);
         ModEntities.register(modEventBus);
         ModBlockEntities.register(modEventBus);
+        ModSounds.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
         // Register ourselves for server and other game events we are interested in.
@@ -57,7 +57,7 @@ public class Foxthingsfromspace {
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if(event.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
+        if (event.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
             event.accept(ModItems.LION_SPAWN_EGG);
         }
     }

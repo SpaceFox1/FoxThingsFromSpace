@@ -8,7 +8,6 @@ import br.com.talesgardem.spacefox.foxthingsfromspace.Foxthingsfromspace;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.model.HierarchicalModel;
-import net.minecraft.client.model.ParrotModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
@@ -27,8 +26,6 @@ public class CrowModel<T extends Entity> extends HierarchicalModel<T> {
 		this.body = root.getChild("Body");
 		this.head = this.body.getChild("Head");
 	}
-
-    ParrotModel
 
 	public static LayerDefinition createBodyLayer() {
 		MeshDefinition meshdefinition = new MeshDefinition();
