@@ -7,15 +7,17 @@ package br.com.talesgardem.spacefox.foxthingsfromspace.entities.client.crow;
 import br.com.talesgardem.spacefox.foxthingsfromspace.Foxthingsfromspace;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import net.minecraft.client.model.EntityModel;
+import net.minecraft.client.model.HierarchicalModel;
+import net.minecraft.client.model.ParrotModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
+import org.jetbrains.annotations.NotNull;
 
-public class CrowModel<T extends Entity> extends EntityModel<T> {
+public class CrowModel<T extends Entity> extends HierarchicalModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(Foxthingsfromspace.MODID, "crow"), "main");
 	private final ModelPart body;
@@ -25,6 +27,8 @@ public class CrowModel<T extends Entity> extends EntityModel<T> {
 		this.body = root.getChild("Body");
 		this.head = this.body.getChild("Head");
 	}
+
+    ParrotModel
 
 	public static LayerDefinition createBodyLayer() {
 		MeshDefinition meshdefinition = new MeshDefinition();
@@ -68,4 +72,9 @@ public class CrowModel<T extends Entity> extends EntityModel<T> {
 	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, int color) {
 		body.render(poseStack, vertexConsumer, packedLight, packedOverlay, color);
 	}
+
+    @Override
+    public @NotNull ModelPart root() {
+        return body;
+    }
 }

@@ -11,7 +11,7 @@ import net.minecraft.client.animation.KeyframeAnimations;
  * @author Author
  */
 public class CrowAnimation {
-	public static final AnimationDefinition idle = AnimationDefinition.Builder.withLength(1.0F).looping()
+	public static final AnimationDefinition ANIM_CROW_IDLE = AnimationDefinition.Builder.withLength(1.0F).looping()
 		.addAnimation("RightWing", new AnimationChannel(AnimationChannel.Targets.ROTATION,
 			new Keyframe(0.0F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
 			new Keyframe(0.375F, KeyframeAnimations.degreeVec(-5.0047F, 2.4905F, -7.718F), AnimationChannel.Interpolations.LINEAR),
@@ -29,7 +29,7 @@ public class CrowAnimation {
 		))
 		.build();
 
-	public static final AnimationDefinition Flying = AnimationDefinition.Builder.withLength(0.8333F).looping()
+	public static final AnimationDefinition ANIM_CROW_FLYING = AnimationDefinition.Builder.withLength(0.8333F).looping()
 		.addAnimation("Body", new AnimationChannel(AnimationChannel.Targets.POSITION, 
 			new Keyframe(0.0F, KeyframeAnimations.posVec(0.0F, 2.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
 			new Keyframe(0.2917F, KeyframeAnimations.posVec(0.0F, 1.0F, 0.0F), AnimationChannel.Interpolations.LINEAR),
