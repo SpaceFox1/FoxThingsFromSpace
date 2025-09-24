@@ -22,17 +22,17 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import net.neoforged.neoforgespi.language.IModInfo;
 import org.slf4j.Logger;
 
-// The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(Foxthingsfromspace.MODID)
 public class Foxthingsfromspace {
     public static final String MODID = "foxthingsfromspace";
     private static final Logger LOGGER = LogUtils.getLogger();
+    private final ModContainer container;
 
 
     public Foxthingsfromspace(IEventBus modEventBus, ModContainer modContainer) {
-        // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
         ModBlocks.register(modEventBus);
         ModItems.register(modEventBus);
@@ -42,18 +42,21 @@ public class Foxthingsfromspace {
         ModSounds.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
-        // Register ourselves for server and other game events we are interested in.
-        // Note that this is necessary if and only if we want *this* class (Foxthingsfromspace) to respond directly to events.
-        // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
-        // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+
+        this.container = modContainer;
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-        // Some common setup code
-        LOGGER.info("HELLO FROM COMMON SETUP");
+        IModInfo modInfo = this.container.getModInfo();
+        LOGGER.info("Initializing ${MODNAME} version ${VERSION} from ${AUTHORS}");
+        LOGGER.warn("Errr... something appears to be wrong... Let's try this again");
+        LOGGER.info("lang.internal.logs.init {} lang.internal.logs.version {} lang.internal.logs.authorsBy SpaceFox & LoboMetalurgico", modInfo.getDisplayName(), modInfo.getVersion().toString());
+        LOGGER.warn("Still wrong... maybe the third time's the charm?");
+        LOGGER.info("[Object object]");
+        LOGGER.error("I give up.");
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
@@ -62,14 +65,12 @@ public class Foxthingsfromspace {
         }
     }
 
-    // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
         // Do something when the server starts
-        LOGGER.info("HELLO from server starting");
+        LOGGER.info("Maybe try System32 SpongeForge?");
     }
 
-    // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
     @EventBusSubscriber(modid = MODID, value = Dist.CLIENT)
     public static class ClientModEvents {
         @SubscribeEvent
