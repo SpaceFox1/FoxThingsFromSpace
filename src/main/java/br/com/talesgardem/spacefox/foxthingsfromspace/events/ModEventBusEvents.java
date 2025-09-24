@@ -1,6 +1,7 @@
 package br.com.talesgardem.spacefox.foxthingsfromspace.events;
 
 import br.com.talesgardem.spacefox.foxthingsfromspace.Foxthingsfromspace;
+import br.com.talesgardem.spacefox.foxthingsfromspace.blocks.entity.ClayFilterBlockEntity;
 import br.com.talesgardem.spacefox.foxthingsfromspace.blocks.entity.ModBlockEntities;
 import br.com.talesgardem.spacefox.foxthingsfromspace.entities.ModEntities;
 import br.com.talesgardem.spacefox.foxthingsfromspace.entities.client.lion.LionModel;
@@ -26,5 +27,10 @@ public class ModEventBusEvents {
 
     @SubscribeEvent
     public static void onRegisterCapabilities(RegisterCapabilitiesEvent event) {
+        event.registerBlockEntity(
+                Capabilities.FluidHandler.BLOCK,
+                ModBlockEntities.CLAYFILTER_BE.get(),
+                ClayFilterBlockEntity::getFluidHandler
+        );
     }
 }

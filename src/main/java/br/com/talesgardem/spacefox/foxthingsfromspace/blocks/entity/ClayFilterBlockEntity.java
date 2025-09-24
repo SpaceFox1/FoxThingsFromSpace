@@ -1,5 +1,6 @@
 package br.com.talesgardem.spacefox.foxthingsfromspace.blocks.entity;
 
+import br.com.talesgardem.spacefox.foxthingsfromspace.blocks.handlers.InfiniteWaterHandler;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.HolderLookup;
@@ -21,28 +22,9 @@ public class ClayFilterBlockEntity extends BlockEntity {
         super(ModBlockEntities.CLAYFILTER_BE.get(), pos, state);
     }
 
-    private final FluidTank tank = new FluidTank(Integer.MAX_VALUE) {
-        @Override
-        public @NotNull FluidStack getFluid() {
-            return
-        }
-    };
+    private final InfiniteWaterHandler waterHandler = new InfiniteWaterHandler();
 
     public IFluidHandler getFluidHandler(@Nullable Direction side) {
-        return tank;
-    }
-
-    @Override
-    protected void saveAdditional(@NotNull CompoundTag tag, HolderLookup.@NotNull Provider registries) {
-        super.saveAdditional(tag, registries);
-        tag.put("Tank", tank.writeToNBT(registries, new CompoundTag()));
-    }
-
-    @Override
-    protected void loadAdditional(@NotNull CompoundTag tag, HolderLookup.@NotNull Provider registries) {
-        super.loadAdditional(tag, registries);
-        if (tag.contains("Tank")) {
-            tank.readFromNBT(tag.getCompound("Tank"));
-        }
+        return waterHandler;
     }
 }

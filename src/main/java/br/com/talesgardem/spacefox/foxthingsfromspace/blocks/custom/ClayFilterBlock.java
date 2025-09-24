@@ -3,24 +3,31 @@ package br.com.talesgardem.spacefox.foxthingsfromspace.blocks.custom;
 import br.com.talesgardem.spacefox.foxthingsfromspace.blocks.entity.ClayFilterBlockEntity;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.alchemy.PotionContents;
+import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.BaseEntityBlock;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.RenderShape;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.neoforged.neoforge.fluids.FluidStack;
+import net.neoforged.neoforge.fluids.capability.IFluidHandler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -48,7 +55,6 @@ public class ClayFilterBlock extends BaseEntityBlock {
         return defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
     }
 
-
     @Override
     protected @NotNull MapCodec<? extends BaseEntityBlock> codec() {
         return CODEC;
@@ -70,7 +76,45 @@ public class ClayFilterBlock extends BaseEntityBlock {
             return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
         }
 
-        if (level.getBlockEntity(pos) instanceof ClayFilterBlockEntity be) {
+        BlockEntity be = level.getBlockEntity(pos);
+        if (!(be instanceof ClayFilterBlockEntity)) {
+            return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
+        }
+
+        Item item = stack.getItem();
+
+        if (item == Items.BUCKET) {
+            if (!player.isCreative()) {
+                stack.shrink(1);
+                ItemStack filled = new ItemStack(Items.WATER_BUCKET);
+                if (!player.addItem(filled)) {
+                    player.drop(filled, false);
+                }
+            }
+            return ItemInteractionResult.SUCCESS;
+        }
+
+        if (item == Items.GLASS_BOTTLE) {
+            if (!player.isCreative()) {
+                stack.shrink(1);
+                ItemStack filled = PotionContents.createItemStack(Items.POTION, Potions.WATER);
+                if (!player.addItem(filled)) {
+                    player.drop(filled, false);
+                }
+            }
+            return ItemInteractionResult.SUCCESS;
+        }
+
+        if (item == Items.WATER_BUCKET) {
+            if (!player.isCreative()) {
+                stack.shrink(1);
+                ItemStack empty = new ItemStack(Items.BUCKET);
+                if (!player.addItem(empty)) {
+                    player.drop(empty, false);
+                }
+            }
+
+            return ItemInteractionResult.SUCCESS;
         }
 
         return ItemInteractionResult.SUCCESS;
