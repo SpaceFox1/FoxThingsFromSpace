@@ -34,21 +34,18 @@ public class ModBlocks {
     public static final DeferredBlock<Block> CHIBIAZURA_PLUSHIE_BLOCK = BLOCKS.register("chibiazura_plushie_block",
             () -> new ChibiazuraPlushieBlock(BlockBehaviour.Properties.of()
                     .noOcclusion()
-                    .noLootTable() // FIXME: Add recipe
                     .sound(SoundType.WOOL)
             ));
 
     public static final DeferredBlock<Block> LEOBRINE_PLUSHIE_BLOCK = BLOCKS.register("leobrine_plushie_block",
             () -> new LeobrinePlushieBlock(BlockBehaviour.Properties.of()
                     .noOcclusion()
-                    .noLootTable() // FIXME: Add recipe
                     .sound(SoundType.WOOL)
             ));
 
     public static final DeferredBlock<Block> LOBO_PLUSHIE_BLOCK = BLOCKS.register("lobo_plushie_block",
             () -> new LoboPlushieBlock(BlockBehaviour.Properties.of()
                     .noOcclusion()
-                    .noLootTable() // FIXME: Add recipe
                     .sound(SoundType.WOOL)
             ));
 

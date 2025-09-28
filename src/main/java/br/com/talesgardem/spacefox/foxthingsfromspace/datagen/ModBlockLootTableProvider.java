@@ -28,6 +28,10 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     @Override
     protected void generate() {
         dropSelf(ModBlocks.CLAYFILTER_BLOCK.get());
+        dropSelf(ModBlocks.LOBO_PLUSHIE_BLOCK.get());
+        dropSelf(ModBlocks.SPACEFOX_PLUSHIE_BLOCK.get());
+        dropSelf(ModBlocks.LEOBRINE_PLUSHIE_BLOCK.get());
+        dropSelf(ModBlocks.CHIBIAZURA_PLUSHIE_BLOCK.get());
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {
