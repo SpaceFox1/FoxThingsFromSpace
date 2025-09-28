@@ -1,5 +1,5 @@
 {
-	"format_version": "1.12.0",
+	"format_version": "1.21.20",
 	"minecraft:geometry": [
 		{
 			"description": {
@@ -7,8 +7,8 @@
 				"texture_width": 128,
 				"texture_height": 128,
 				"visible_bounds_width": 3,
-				"visible_bounds_height": 2.5,
-				"visible_bounds_offset": [0, 0.75, 0]
+				"visible_bounds_height": 3,
+				"visible_bounds_offset": [0, 0.5, 0]
 			},
 			"bones": [
 				{
@@ -315,7 +315,18 @@
 					"parent": "Backpack",
 					"pivot": [0, 12.825, 0],
 					"cubes": [
-						{"origin": [-3, 3.825, 4], "size": [6, 5, 1.5], "uv": [82, 0]}
+						{
+							"origin": [-3, 3.825, 4],
+							"size": [6, 5, 1.5],
+							"uv": {
+								"north": {"uv": [83.99286, 2.01667], "uv_size": [6.00714, 4.98333]},
+								"east": {"uv": [82, 2.01667], "uv_size": [1.94286, 4.98333]},
+								"south": {"uv": [91.99286, 1.99167], "uv_size": [6.00714, 5.00833]},
+								"west": {"uv": [90, 2.01667], "uv_size": [2.04286, 4.98333]},
+								"up": {"uv": [84.01786, 0], "uv_size": [5.98214, 1.96667]},
+								"down": {"uv": [90, 1.96667], "uv_size": [5.85714, -1.96667]}
+							}
+						}
 					]
 				},
 				{
