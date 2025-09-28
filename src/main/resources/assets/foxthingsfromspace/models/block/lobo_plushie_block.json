@@ -53,6 +53,11 @@
       ]
     },
     "firstperson_lefthand": {
+      "rotation": [
+        0,
+        128,
+        0
+      ],
       "translation": [
         0,
         0,
