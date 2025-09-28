@@ -109,6 +109,6 @@
     }
   },
   "textures": {
-    "particle": "foxthingsfromspace:item/leobrineplushie"
+    "particle": "foxthingsfromspace:block/leobrine_plushie_block"
   }
 }

@@ -109,6 +109,6 @@
     }
   },
   "textures": {
-    "particle": "foxthingsfromspace:item/loboplushie"
+    "particle": "foxthingsfromspace:block/lobo_plushie_block"
   }
 }

@@ -5,5 +5,9 @@
 
   "entity.foxthingsfromspace.lion": "Lion",
 
-  "block.foxthingsfromspace.clayfilter_block": "Clay Filter"
+  "block.foxthingsfromspace.clayfilter_block": "Clay Filter",
+
+  "block.foxthingsfromspace.lobo_plushie_block": "LoboMetalurgico Plushie",
+  "block.foxthingsfromspace.leobrine_plushie_block": "Leobrine_25 Plushie",
+  "block.foxthingsfromspace.chibiazura_plushie_block": "Chibiazura Plushie"
 }

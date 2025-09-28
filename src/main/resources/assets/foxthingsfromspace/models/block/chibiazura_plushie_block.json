@@ -109,6 +109,6 @@
     }
   },
   "textures": {
-    "particle": "foxthingsfromspace:item/chibiazureplushie"
+    "particle": "foxthingsfromspace:block/chibiazura_plushie_block"
   }
 }

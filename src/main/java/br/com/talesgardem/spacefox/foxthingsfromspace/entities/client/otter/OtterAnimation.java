@@ -1,4 +1,9 @@
-// Save this class in your mod and generate all required imports
+package br.com.talesgardem.spacefox.foxthingsfromspace.entities.client.otter;// Save this class in your mod and generate all required imports
+
+import net.minecraft.client.animation.AnimationChannel;
+import net.minecraft.client.animation.AnimationDefinition;
+import net.minecraft.client.animation.Keyframe;
+import net.minecraft.client.animation.KeyframeAnimations;
 
 /**
  * Made with Blockbench 4.12.6
@@ -6,8 +11,8 @@
  * @author Author
  */
 public class OtterAnimation {
-	public static final AnimationDefinition idle = AnimationDefinition.Builder.withLength(1.0F).looping()
-		.addAnimation("Head", new AnimationChannel(AnimationChannel.Targets.ROTATION, 
+	public static final AnimationDefinition ANIM_OTTER_IDLE = AnimationDefinition.Builder.withLength(1.0F).looping()
+		.addAnimation("Head", new AnimationChannel(AnimationChannel.Targets.ROTATION,
 			new Keyframe(0.0F, KeyframeAnimations.degreeVec(0.0F, 0.0F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
 			new Keyframe(0.375F, KeyframeAnimations.degreeVec(0.2187F, -0.4952F, -0.5095F), AnimationChannel.Interpolations.CATMULLROM),
 			new Keyframe(0.75F, KeyframeAnimations.degreeVec(0.3482F, 0.0426F, 0.7213F), AnimationChannel.Interpolations.CATMULLROM),
@@ -21,7 +26,7 @@ public class OtterAnimation {
 		))
 		.build();
 
-	public static final AnimationDefinition Walk = AnimationDefinition.Builder.withLength(1.2917F).looping()
+	public static final AnimationDefinition ANIM_OTTER_WALK = AnimationDefinition.Builder.withLength(1.2917F).looping()
 		.addAnimation("RightLeg", new AnimationChannel(AnimationChannel.Targets.ROTATION, 
 			new Keyframe(0.0F, KeyframeAnimations.degreeVec(-20.79F, 0.0F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),
 			new Keyframe(0.2917F, KeyframeAnimations.degreeVec(-37.5F, 0.0F, 0.0F), AnimationChannel.Interpolations.CATMULLROM),

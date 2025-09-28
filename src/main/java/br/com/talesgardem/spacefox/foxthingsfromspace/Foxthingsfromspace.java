@@ -2,12 +2,16 @@ package br.com.talesgardem.spacefox.foxthingsfromspace;
 
 import br.com.talesgardem.spacefox.foxthingsfromspace.blocks.ModBlocks;
 import br.com.talesgardem.spacefox.foxthingsfromspace.blocks.entity.ModBlockEntities;
+import br.com.talesgardem.spacefox.foxthingsfromspace.blocks.entity.plushie.chibiazura.client.ChibiazuraPlushieBlockRenderer;
+import br.com.talesgardem.spacefox.foxthingsfromspace.blocks.entity.plushie.leobrine.client.LeobrinePlushieBlockRenderer;
+import br.com.talesgardem.spacefox.foxthingsfromspace.blocks.entity.plushie.lobo.client.LoboPlushieBlockRenderer;
 import br.com.talesgardem.spacefox.foxthingsfromspace.entities.ModEntities;
 import br.com.talesgardem.spacefox.foxthingsfromspace.entities.client.lion.LionRenderer;
 import br.com.talesgardem.spacefox.foxthingsfromspace.items.ModCreativeModeTabs;
 import br.com.talesgardem.spacefox.foxthingsfromspace.items.ModItems;
 import br.com.talesgardem.spacefox.foxthingsfromspace.sound.ModSounds;
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.api.distmarker.Dist;
@@ -76,6 +80,9 @@ public class Foxthingsfromspace {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             EntityRenderers.register(ModEntities.LION.get(), LionRenderer::new);
+            BlockEntityRenderers.register(ModBlockEntities.LOBO_PLUSHIE_BE.get(), LoboPlushieBlockRenderer::new);
+            BlockEntityRenderers.register(ModBlockEntities.LEOBRINE_PLUSHIE_BE.get(), LeobrinePlushieBlockRenderer::new);
+            BlockEntityRenderers.register(ModBlockEntities.CHIBIAZURA_PLUSHIE_BE.get(), ChibiazuraPlushieBlockRenderer::new);
         }
     }
 }

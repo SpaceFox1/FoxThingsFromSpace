@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "foxthingsfromspace:block/chibiazura_plushie_block"
+    },
+    "facing=south": {
+      "model": "foxthingsfromspace:block/chibiazura_plushie_block",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "foxthingsfromspace:block/chibiazura_plushie_block",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "foxthingsfromspace:block/chibiazura_plushie_block",
+      "y": 270
+    }
+  }
+}

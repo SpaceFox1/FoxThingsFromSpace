@@ -5,5 +5,9 @@
 
   "entity.foxthingsfromspace.lion": "Leão",
 
-  "block.foxthingsfromspace.clayfilter_block": "Filtro de Barro"
+  "block.foxthingsfromspace.clayfilter_block": "Filtro de Barro",
+
+  "block.foxthingsfromspace.lobo_plushie_block": "Pelúcia do LoboMetalurgico",
+  "block.foxthingsfromspace.leobrine_plushie_block": "Pelúcia do Leobrine_25",
+  "block.foxthingsfromspace.chibiazura_plushie_block": "Pelúcia da Chibiazura"
 }

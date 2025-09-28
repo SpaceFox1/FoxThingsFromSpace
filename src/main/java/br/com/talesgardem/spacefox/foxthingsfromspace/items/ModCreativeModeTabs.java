@@ -5,10 +5,8 @@ import br.com.talesgardem.spacefox.foxthingsfromspace.blocks.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.IEventBus;
-import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
@@ -23,6 +21,9 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.LION_SPAWN_EGG);
                         output.accept(ModBlocks.CLAYFILTER_BLOCK);
+                        output.accept(ModBlocks.LOBO_PLUSHIE_BLOCK);
+                        output.accept(ModBlocks.LEOBRINE_PLUSHIE_BLOCK);
+                        output.accept(ModBlocks.CHIBIAZURA_PLUSHIE_BLOCK);
                     }).build());
 
 

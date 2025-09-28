@@ -1,43 +1,29 @@
+package br.com.talesgardem.spacefox.foxthingsfromspace.entities.client.otter;
+
+import br.com.talesgardem.spacefox.foxthingsfromspace.Foxthingsfromspace;
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.blaze3d.vertex.VertexConsumer;
+import net.minecraft.client.model.EntityModel;
+import net.minecraft.client.model.geom.ModelLayerLocation;
+import net.minecraft.client.model.geom.ModelPart;
+import net.minecraft.client.model.geom.PartPose;
+import net.minecraft.client.model.geom.builders.*;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.Entity;
+import org.jetbrains.annotations.NotNull;
+
 // Made with Blockbench 4.12.6
 // Exported for Minecraft version 1.17 or later with Mojang mappings
 // Paste this class into your mod and generate all required imports
-
-
-public class Otter<T extends Otter> extends EntityModel<T> {
+public class Otter<T extends Entity> extends EntityModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
-	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("modid", "otter"), "main");
+	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(Foxthingsfromspace.MODID, "otter"), "main");
 	private final ModelPart Body;
 	private final ModelPart Head;
-	private final ModelPart LeftLeg;
-	private final ModelPart LeftBLeg;
-	private final ModelPart LeftPaw;
-	private final ModelPart LeftLegBack;
-	private final ModelPart LeftBLeg2;
-	private final ModelPart LeftPaw2;
-	private final ModelPart RightLeg;
-	private final ModelPart LeftBLeg3;
-	private final ModelPart LeftPaw3;
-	private final ModelPart RightLegBack;
-	private final ModelPart LeftBLeg4;
-	private final ModelPart LeftPaw4;
-	private final ModelPart tail;
 
 	public Otter(ModelPart root) {
 		this.Body = root.getChild("Body");
 		this.Head = this.Body.getChild("Head");
-		this.LeftLeg = this.Body.getChild("LeftLeg");
-		this.LeftBLeg = this.LeftLeg.getChild("LeftBLeg");
-		this.LeftPaw = this.LeftBLeg.getChild("LeftPaw");
-		this.LeftLegBack = this.Body.getChild("LeftLegBack");
-		this.LeftBLeg2 = this.LeftLegBack.getChild("LeftBLeg2");
-		this.LeftPaw2 = this.LeftBLeg2.getChild("LeftPaw2");
-		this.RightLeg = this.Body.getChild("RightLeg");
-		this.LeftBLeg3 = this.RightLeg.getChild("LeftBLeg3");
-		this.LeftPaw3 = this.LeftBLeg3.getChild("LeftPaw3");
-		this.RightLegBack = this.Body.getChild("RightLegBack");
-		this.LeftBLeg4 = this.RightLegBack.getChild("LeftBLeg4");
-		this.LeftPaw4 = this.LeftBLeg4.getChild("LeftPaw4");
-		this.tail = this.Body.getChild("tail");
 	}
 
 	public static LayerDefinition createBodyLayer() {
@@ -89,12 +75,12 @@ public class Otter<T extends Otter> extends EntityModel<T> {
 	}
 
 	@Override
-	public void setupAnim(Otter entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+	public void setupAnim(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 
 	}
 
-	@Override
-	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
-		Body.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-	}
+    @Override
+    public void renderToBuffer(@NotNull PoseStack poseStack, @NotNull VertexConsumer vertexConsumer, int packedLight, int packedOverlay, int color) {
+        Body.render(poseStack, vertexConsumer, packedLight, packedOverlay, color);
+    }
 }
