@@ -5,6 +5,7 @@ import br.com.talesgardem.spacefox.foxthingsfromspace.blocks.ModBlocks;
 import br.com.talesgardem.spacefox.foxthingsfromspace.blocks.entity.plushie.chibiazura.ChibiazuraPlushieBlockEntity;
 import br.com.talesgardem.spacefox.foxthingsfromspace.blocks.entity.plushie.leobrine.LeobrinePlushieBlockEntity;
 import br.com.talesgardem.spacefox.foxthingsfromspace.blocks.entity.plushie.lobo.LoboPlushieBlockEntity;
+import br.com.talesgardem.spacefox.foxthingsfromspace.blocks.entity.plushie.spacefox.SpacefoxPlushieBlockEntity;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.bus.api.IEventBus;
@@ -27,6 +28,9 @@ public class ModBlockEntities {
 
     public static final Supplier<BlockEntityType<LoboPlushieBlockEntity>> LOBO_PLUSHIE_BE =
             BLOCK_ENTITIES.register("lobo_plushie_be", () -> BlockEntityType.Builder.of(LoboPlushieBlockEntity::new, ModBlocks.LOBO_PLUSHIE_BLOCK.get()).build(null));
+
+    public static final Supplier<BlockEntityType<SpacefoxPlushieBlockEntity>> SPACEFOX_PLUSHIE_BE =
+            BLOCK_ENTITIES.register("spacefox_plushie_be", () -> BlockEntityType.Builder.of(SpacefoxPlushieBlockEntity::new, ModBlocks.SPACEFOX_PLUSHIE_BLOCK.get()).build(null));
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);

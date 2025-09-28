@@ -23,6 +23,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.CLAYFILTER_BLOCK);
                         output.accept(ModBlocks.LOBO_PLUSHIE_BLOCK);
                         output.accept(ModBlocks.LEOBRINE_PLUSHIE_BLOCK);
+                        output.accept(ModBlocks.SPACEFOX_PLUSHIE_BLOCK);
                         output.accept(ModBlocks.CHIBIAZURA_PLUSHIE_BLOCK);
                     }).build());
 

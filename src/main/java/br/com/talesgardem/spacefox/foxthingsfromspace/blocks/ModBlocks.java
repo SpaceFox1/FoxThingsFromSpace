@@ -5,6 +5,7 @@ import br.com.talesgardem.spacefox.foxthingsfromspace.blocks.custom.ClayFilterBl
 import br.com.talesgardem.spacefox.foxthingsfromspace.blocks.custom.plushie.ChibiazuraPlushieBlock;
 import br.com.talesgardem.spacefox.foxthingsfromspace.blocks.custom.plushie.LeobrinePlushieBlock;
 import br.com.talesgardem.spacefox.foxthingsfromspace.blocks.custom.plushie.LoboPlushieBlock;
+import br.com.talesgardem.spacefox.foxthingsfromspace.blocks.custom.plushie.SpacefoxPlushieBlock;
 import br.com.talesgardem.spacefox.foxthingsfromspace.items.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -48,6 +49,12 @@ public class ModBlocks {
             () -> new LoboPlushieBlock(BlockBehaviour.Properties.of()
                     .noOcclusion()
                     .noLootTable() // FIXME: Add recipe
+                    .sound(SoundType.WOOL)
+            ));
+
+    public static final DeferredBlock<Block> SPACEFOX_PLUSHIE_BLOCK = BLOCKS.register("spacefox_plushie_block",
+            () -> new SpacefoxPlushieBlock(BlockBehaviour.Properties.of()
+                    .noOcclusion()
                     .sound(SoundType.WOOL)
             ));
 

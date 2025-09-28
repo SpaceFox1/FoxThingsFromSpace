@@ -17,6 +17,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         blockItem(ModBlocks.CLAYFILTER_BLOCK);
         blockItem(ModBlocks.LOBO_PLUSHIE_BLOCK);
+        blockItem(ModBlocks.SPACEFOX_PLUSHIE_BLOCK);
         blockItem(ModBlocks.LEOBRINE_PLUSHIE_BLOCK);
         blockItem(ModBlocks.CHIBIAZURA_PLUSHIE_BLOCK);
     }

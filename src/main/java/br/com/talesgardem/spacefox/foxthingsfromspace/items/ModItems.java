@@ -6,6 +6,7 @@ import br.com.talesgardem.spacefox.foxthingsfromspace.entities.ModEntities;
 import br.com.talesgardem.spacefox.foxthingsfromspace.items.custom.plushie.chibiazura.ChibiazuraPlushieBlockItem;
 import br.com.talesgardem.spacefox.foxthingsfromspace.items.custom.plushie.leobrine.LeobrinePlushieBlockItem;
 import br.com.talesgardem.spacefox.foxthingsfromspace.items.custom.plushie.lobo.LoboPlushieBlockItem;
+import br.com.talesgardem.spacefox.foxthingsfromspace.items.custom.plushie.spacefox.SpacefoxPlushieBlockItem;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.common.DeferredSpawnEggItem;
@@ -29,6 +30,9 @@ public class ModItems {
 
     public static final DeferredItem<Item> LOBO_PLUSHIE_BLOCK_ITEM = ITEMS.register("lobo_plushie_block",
             () -> new LoboPlushieBlockItem(ModBlocks.LOBO_PLUSHIE_BLOCK.get(), new Item.Properties().stacksTo(1)));
+
+    public static final DeferredItem<Item> SPACEFOX_PLUSHIE_BLOCK_ITEM = ITEMS.register("spacefox_plushie_block",
+            () -> new SpacefoxPlushieBlockItem(ModBlocks.SPACEFOX_PLUSHIE_BLOCK.get(), new Item.Properties().stacksTo(1)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
