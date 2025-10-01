@@ -8,6 +8,7 @@ import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.material.Fluids;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
@@ -32,5 +33,41 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('B', Fluids.WATER.getBucket())
                 .unlockedBy("has_terracota", has(Items.TERRACOTTA))
                 .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.SPACEFOX_PLUSHIE_BLOCK.get())
+                .pattern("OOO")
+                .pattern("WJW")
+                .pattern("R R")
+                .define('W', Items.WHITE_WOOL)
+                .define('O', Items.ORANGE_WOOL)
+                .define('R', Items.RED_WOOL)
+                .define('J', Items.JUKEBOX)
+                .unlockedBy("has_white_wool", has(Items.WHITE_WOOL))
+                .unlockedBy("has_orange_wool", has(Items.ORANGE_WOOL))
+                .unlockedBy("has_red_wool", has(Items.RED_WOOL))
+                .unlockedBy("has_jukebox", has(Items.JUKEBOX))
+                .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.LOBO_PLUSHIE_BLOCK.get())
+                .pattern("WGY")
+                .pattern("PJC")
+                .pattern("B B")
+                .define('P', Items.STONE_PICKAXE)
+                .define('G', Items.GRAY_WOOL)
+                .define('W', Items.WHITE_WOOL)
+                .define('Y', Items.YELLOW_WOOL)
+                .define('C', Items.CYAN_WOOL)
+                .define('B', Items.BLACK_WOOL)
+                .define('J', Items.JUKEBOX)
+                .unlockedBy("has_white_wool", has(Items.WHITE_WOOL))
+                .unlockedBy("has_gray_wool", has(Items.GRAY_WOOL))
+                .unlockedBy("has_yellow_wool", has(Items.YELLOW_WOOL))
+                .unlockedBy("has_cyan_wool", has(Items.CYAN_WOOL))
+                .unlockedBy("has_black_wool", has(Items.BLACK_WOOL))
+                .unlockedBy("has_stone_pickaxe", has(Items.STONE_PICKAXE))
+                .unlockedBy("has_jukebox", has(Items.JUKEBOX))
+                .save(recipeOutput);
+
+
     }
 }

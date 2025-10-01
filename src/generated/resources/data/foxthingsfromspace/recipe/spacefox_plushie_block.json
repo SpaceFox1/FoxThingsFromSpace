@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "J": {
+      "item": "minecraft:jukebox"
+    },
+    "O": {
+      "item": "minecraft:orange_wool"
+    },
+    "R": {
+      "item": "minecraft:red_wool"
+    },
+    "W": {
+      "item": "minecraft:white_wool"
+    }
+  },
+  "pattern": [
+    "OOO",
+    "WJW",
+    "R R"
+  ],
+  "result": {
+    "count": 1,
+    "id": "foxthingsfromspace:spacefox_plushie_block"
+  }
+}

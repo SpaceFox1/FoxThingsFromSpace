@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:black_wool"
+    },
+    "C": {
+      "item": "minecraft:cyan_wool"
+    },
+    "G": {
+      "item": "minecraft:gray_wool"
+    },
+    "J": {
+      "item": "minecraft:jukebox"
+    },
+    "P": {
+      "item": "minecraft:stone_pickaxe"
+    },
+    "W": {
+      "item": "minecraft:white_wool"
+    },
+    "Y": {
+      "item": "minecraft:yellow_wool"
+    }
+  },
+  "pattern": [
+    "WGY",
+    "PJC",
+    "B B"
+  ],
+  "result": {
+    "count": 1,
+    "id": "foxthingsfromspace:lobo_plushie_block"
+  }
+}
