@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "foxthingsfromspace:item/moonlight_sonata_eins_music_disc"
+  }
+}

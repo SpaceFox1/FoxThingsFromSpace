@@ -1,0 +1,8 @@
+{
+  "comparator_output": 1,
+  "description": {
+    "translate": "item.foxthingsfromspace.vai_dar_m_music_disc.desc"
+  },
+  "length_in_seconds": 16.0,
+  "sound_event": "foxthingsfromspace:vai_dar_m"
+}

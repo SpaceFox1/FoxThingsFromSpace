@@ -1,0 +1,8 @@
+{
+  "comparator_output": 10,
+  "description": {
+    "translate": "item.foxthingsfromspace.moonlight_sonata_drei_music_disc.desc"
+  },
+  "length_in_seconds": 412.0,
+  "sound_event": "foxthingsfromspace:moonlight_sonata_drei"
+}

@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:blue_wool"
+    },
+    "J": {
+      "item": "minecraft:jukebox"
+    },
+    "K": {
+      "item": "minecraft:black_wool"
+    },
+    "R": {
+      "item": "minecraft:red_wool"
+    },
+    "S": {
+      "tag": "minecraft:signs"
+    },
+    "W": {
+      "item": "minecraft:white_wool"
+    }
+  },
+  "pattern": [
+    "BWK",
+    "SJR",
+    "K K"
+  ],
+  "result": {
+    "count": 1,
+    "id": "foxthingsfromspace:leobrine_plushie_block"
+  }
+}

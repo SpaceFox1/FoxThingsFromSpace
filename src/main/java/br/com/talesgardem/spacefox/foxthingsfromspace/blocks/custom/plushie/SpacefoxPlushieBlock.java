@@ -4,6 +4,7 @@ import br.com.talesgardem.spacefox.foxthingsfromspace.blocks.entity.plushie.spac
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RenderShape;
@@ -12,11 +13,14 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class SpacefoxPlushieBlock extends BaseEntityBlock {
     public static final MapCodec<SpacefoxPlushieBlock> CODEC = simpleCodec(SpacefoxPlushieBlock::new);
+    private static final VoxelShape SHAPE = Block.box(2, 0, 4, 16, 12, 13);
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 
     public SpacefoxPlushieBlock(Properties properties) {
@@ -31,6 +35,11 @@ public class SpacefoxPlushieBlock extends BaseEntityBlock {
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         return defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
+    }
+
+    @Override
+    protected @NotNull VoxelShape getShape(@NotNull BlockState state, @NotNull BlockGetter level, @NotNull BlockPos pos, @NotNull CollisionContext context) {
+        return SHAPE;
     }
 
     @Override

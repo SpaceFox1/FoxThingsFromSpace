@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "foxthingsfromspace:item/an_der_schonen_blauen_donau_music_disc"
+  }
+}

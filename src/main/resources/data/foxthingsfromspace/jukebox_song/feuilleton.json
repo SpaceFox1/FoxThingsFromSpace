@@ -1,0 +1,8 @@
+{
+  "comparator_output": 7,
+  "description": {
+    "translate": "item.foxthingsfromspace.feuilleton_music_disc.desc"
+  },
+  "length_in_seconds": 668.0,
+  "sound_event": "foxthingsfromspace:feuilleton"
+}

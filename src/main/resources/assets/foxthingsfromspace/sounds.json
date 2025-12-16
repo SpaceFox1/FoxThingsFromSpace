@@ -1,0 +1,90 @@
+{
+  "rhadamantus": {
+    "sounds": [
+      {
+        "name": "foxthingsfromspace:rhadamantus",
+        "stream": true
+      }
+    ]
+  },
+  "maxing_tanze": {
+    "sounds": [
+      {
+        "name": "foxthingsfromspace:maxing_tanze",
+        "stream": true
+      }
+    ]
+  },
+  "fruhlingsstimmen": {
+    "sounds": [
+      {
+        "name": "foxthingsfromspace:fruhlingsstimmen",
+        "stream": true
+      }
+    ]
+  },
+  "an_der_schonen_blauen_donau": {
+    "sounds": [
+      {
+        "name": "foxthingsfromspace:an_der_schonen_blauen_donau",
+        "stream": true
+      }
+    ]
+  },
+  "gschichten_aus_dem_wienerwald": {
+    "sounds": [
+      {
+        "name": "foxthingsfromspace:gschichten_aus_dem_wienerwald",
+        "stream": true
+      }
+    ]
+  },
+  "kaiserwalzer": {
+    "sounds": [
+      {
+        "name": "foxthingsfromspace:kaiserwalzer",
+        "stream": true
+      }
+    ]
+  },
+  "feuilleton": {
+    "sounds": [
+      {
+        "name": "foxthingsfromspace:feuilleton",
+        "stream": true
+      }
+    ]
+  },
+  "moonlight_sonata_eins": {
+    "sounds": [
+      {
+        "name": "foxthingsfromspace:moonlight_sonata_eins",
+        "stream": true
+      }
+    ]
+  },
+  "moonlight_sonata_zwei": {
+    "sounds": [
+      {
+        "name": "foxthingsfromspace:moonlight_sonata_zwei",
+        "stream": true
+      }
+    ]
+  },
+  "moonlight_sonata_drei": {
+    "sounds": [
+      {
+        "name": "foxthingsfromspace:moonlight_sonata_drei",
+        "stream": true
+      }
+    ]
+  },
+  "vai_dar_m": {
+    "sounds": [
+      {
+        "name": "foxthingsfromspace:vai_dar_m",
+        "stream": true
+      }
+    ]
+  }
+}

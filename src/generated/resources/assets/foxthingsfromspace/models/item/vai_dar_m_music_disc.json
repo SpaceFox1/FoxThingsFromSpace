@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "foxthingsfromspace:item/vai_dar_m_music_disc"
+  }
+}

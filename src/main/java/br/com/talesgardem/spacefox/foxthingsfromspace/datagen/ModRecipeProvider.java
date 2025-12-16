@@ -7,10 +7,11 @@ import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.material.Fluids;
+import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 import org.jetbrains.annotations.NotNull;
 
@@ -68,6 +69,21 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_jukebox", has(Items.JUKEBOX))
                 .save(recipeOutput);
 
-
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.LEOBRINE_PLUSHIE_BLOCK.get())
+                .pattern("BWK")
+                .pattern("SJR")
+                .pattern("K K")
+                .define('S', ItemTags.SIGNS)
+                .define('W', Items.WHITE_WOOL)
+                .define('R', Items.RED_WOOL)
+                .define('B', Items.BLUE_WOOL)
+                .define('K', Items.BLACK_WOOL)
+                .define('J', Items.JUKEBOX)
+                .unlockedBy("has_white_wool", has(Items.WHITE_WOOL))
+                .unlockedBy("has_red_wool", has(Items.RED_WOOL))
+                .unlockedBy("has_blue_wool", has(Items.BLUE_WOOL))
+                .unlockedBy("has_sign", has(ItemTags.SIGNS))
+                .unlockedBy("has_jukebox", has(Items.JUKEBOX))
+                .save(recipeOutput);
     }
 }

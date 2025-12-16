@@ -20,11 +20,25 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("itemGroup.foxthingsfromspace"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.LION_SPAWN_EGG);
+
                         output.accept(ModBlocks.CLAYFILTER_BLOCK);
+
                         output.accept(ModBlocks.LOBO_PLUSHIE_BLOCK);
                         output.accept(ModBlocks.LEOBRINE_PLUSHIE_BLOCK);
                         output.accept(ModBlocks.SPACEFOX_PLUSHIE_BLOCK);
                         output.accept(ModBlocks.CHIBIAZURA_PLUSHIE_BLOCK);
+
+                        output.accept(ModItems.VAI_DAR_M_MUSIC_DISC);
+                        output.accept(ModItems.FEUILLETON_MUSIC_DISC);
+                        output.accept(ModItems.RHADAMANTUS_MUSIC_DISC);
+                        output.accept(ModItems.MAXING_TANZE_MUSIC_DISC);
+                        output.accept(ModItems.KAISERWALZER_MUSIC_DISC);
+                        output.accept(ModItems.FRUHLINGSSTIMMEN_MUSIC_DISC);
+                        output.accept(ModItems.MOONLIGHT_SONATA_EINS_MUSIC_DISC);
+                        output.accept(ModItems.MOONLIGHT_SONATA_ZWEI_MUSIC_DISC);
+                        output.accept(ModItems.MOONLIGHT_SONATA_DREI_MUSIC_DISC);
+                        output.accept(ModItems.AN_DER_SCHONEN_BLAUEN_DONAU_MUSIC_DISC);
+                        output.accept(ModItems.GSCHICHTEN_AUS_DEM_WIENERWALD_MUSIC_DISC);
                     }).build());
 
 
