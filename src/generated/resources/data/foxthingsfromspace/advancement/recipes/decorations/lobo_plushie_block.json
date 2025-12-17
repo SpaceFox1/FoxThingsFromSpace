@@ -81,12 +81,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_white_wool",
+      "has_stone_pickaxe",
       "has_gray_wool",
+      "has_white_wool",
       "has_yellow_wool",
       "has_cyan_wool",
       "has_black_wool",
-      "has_stone_pickaxe",
       "has_jukebox"
     ]
   ],

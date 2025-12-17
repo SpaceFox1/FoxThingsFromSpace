@@ -20,7 +20,6 @@ import org.jetbrains.annotations.Nullable;
 
 public class LoboPlushieBlock extends BaseEntityBlock {
     public static final MapCodec<LoboPlushieBlock> CODEC = simpleCodec(LoboPlushieBlock::new);
-    private static final VoxelShape SHAPE = Block.box(3, 0, 5, 14, 18, 17);
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 
     public LoboPlushieBlock(Properties properties) {
@@ -39,7 +38,20 @@ public class LoboPlushieBlock extends BaseEntityBlock {
 
     @Override
     protected @NotNull VoxelShape getShape(@NotNull BlockState state, @NotNull BlockGetter level, @NotNull BlockPos pos, @NotNull CollisionContext context) {
-        return SHAPE;
+        switch (state.getValue(FACING).getOpposite()) {
+            case NORTH -> {
+                return Block.box(2, 0, 0, 14, 21, 12);
+            }
+            case EAST -> {
+                return Block.box(4, 0, 2, 16, 21, 14);
+            }
+            case WEST -> {
+                return Block.box(0, 0, 2, 12, 21, 14);
+            }
+            default -> { // SOUTH
+                return Block.box(2, 0, 4, 14, 21, 16);
+            }
+        }
     }
 
     @Override

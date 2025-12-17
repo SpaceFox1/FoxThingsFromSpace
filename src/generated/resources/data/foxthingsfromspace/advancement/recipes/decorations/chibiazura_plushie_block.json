@@ -11,11 +11,11 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_blue_wool": {
+    "has_gray_wool": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:blue_wool"
+            "items": "minecraft:gray_wool"
           }
         ]
       },
@@ -31,6 +31,16 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "has_light_gray_wool": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:light_gray_wool"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "has_red_wool": {
       "conditions": {
         "items": [
@@ -41,27 +51,17 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_sign": {
-      "conditions": {
-        "items": [
-          {
-            "items": "#minecraft:signs"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "foxthingsfromspace:leobrine_plushie_block"
+        "recipe": "foxthingsfromspace:chibiazura_plushie_block"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
-    "has_white_wool": {
+    "has_yellow_wool": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:white_wool"
+            "items": "minecraft:yellow_wool"
           }
         ]
       },
@@ -71,17 +71,17 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_sign",
-      "has_white_wool",
+      "has_yellow_wool",
+      "has_light_gray_wool",
       "has_red_wool",
-      "has_blue_wool",
+      "has_gray_wool",
       "has_black_wool",
       "has_jukebox"
     ]
   ],
   "rewards": {
     "recipes": [
-      "foxthingsfromspace:leobrine_plushie_block"
+      "foxthingsfromspace:chibiazura_plushie_block"
     ]
   }
 }
