@@ -33,7 +33,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.RHADAMANTUS_MUSIC_DISC);
                         output.accept(ModItems.MAXING_TANZE_MUSIC_DISC);
                         output.accept(ModItems.KAISERWALZER_MUSIC_DISC);
+                        output.accept(ModItems.OVERTURE_1812_MUSIC_DISC);
                         output.accept(ModItems.FRUHLINGSSTIMMEN_MUSIC_DISC);
+                        output.accept(ModItems.OVERTURE_THE_WASPS_MUSIC_DISC);
                         output.accept(ModItems.MOONLIGHT_SONATA_EINS_MUSIC_DISC);
                         output.accept(ModItems.MOONLIGHT_SONATA_ZWEI_MUSIC_DISC);
                         output.accept(ModItems.MOONLIGHT_SONATA_DREI_MUSIC_DISC);

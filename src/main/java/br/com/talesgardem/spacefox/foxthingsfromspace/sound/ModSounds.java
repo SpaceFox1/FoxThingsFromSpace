@@ -1,7 +1,6 @@
 package br.com.talesgardem.spacefox.foxthingsfromspace.sound;
 
 import br.com.talesgardem.spacefox.foxthingsfromspace.Foxthingsfromspace;
-import net.minecraft.client.resources.sounds.Sound;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
@@ -53,6 +52,12 @@ public class ModSounds {
 
     public static final Supplier<SoundEvent> VAI_DAR_M = registerSoundEvent("vai_dar_m");
     public static final ResourceKey<JukeboxSong>  VAI_DAR_M_KEY = createSong("vai_dar_m");
+
+    public static final Supplier<SoundEvent> OVERTURE_THE_WASPS = registerSoundEvent("overture_the_wasps");
+    public static final ResourceKey<JukeboxSong>  OVERTURE_THE_WASPS_KEY = createSong("overture_the_wasps");
+
+    public static final Supplier<SoundEvent> OVERTURE_1812 = registerSoundEvent("overture_1812");
+    public static final ResourceKey<JukeboxSong> OVERTURE_1812_KEY = createSong("overture_1812");
 
     public static ResourceKey<JukeboxSong> createSong(String name) {
         return ResourceKey.create(Registries.JUKEBOX_SONG, ResourceLocation.fromNamespaceAndPath(Foxthingsfromspace.MODID, name));

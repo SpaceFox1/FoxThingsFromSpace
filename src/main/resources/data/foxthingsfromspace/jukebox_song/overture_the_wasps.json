@@ -1,0 +1,8 @@
+{
+  "comparator_output": 14,
+  "description": {
+    "translate": "item.foxthingsfromspace.overture_the_wasps_music_disc.desc"
+  },
+  "length_in_seconds": 543.0,
+  "sound_event": "foxthingsfromspace:overture_the_wasps"
+}

@@ -68,6 +68,12 @@ public class ModItems {
     public static final DeferredItem<Item> VAI_DAR_M_MUSIC_DISC = ITEMS.register("vai_dar_m_music_disc",
             () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.VAI_DAR_M_KEY).stacksTo(1)));
 
+    public static final DeferredItem<Item> OVERTURE_THE_WASPS_MUSIC_DISC = ITEMS.register("overture_the_wasps_music_disc",
+            () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.OVERTURE_THE_WASPS_KEY).stacksTo(1)));
+
+    public static final DeferredItem<Item> OVERTURE_1812_MUSIC_DISC = ITEMS.register("overture_1812_music_disc",
+            () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.OVERTURE_1812_KEY).stacksTo(1)));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

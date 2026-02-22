@@ -22,7 +22,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.RHADAMANTUS_MUSIC_DISC.get());
         basicItem(ModItems.MAXING_TANZE_MUSIC_DISC.get());
         basicItem(ModItems.KAISERWALZER_MUSIC_DISC.get());
+        basicItem(ModItems.OVERTURE_1812_MUSIC_DISC.get());
         basicItem(ModItems.FRUHLINGSSTIMMEN_MUSIC_DISC.get());
+        basicItem(ModItems.OVERTURE_THE_WASPS_MUSIC_DISC.get());
         basicItem(ModItems.MOONLIGHT_SONATA_EINS_MUSIC_DISC.get());
         basicItem(ModItems.MOONLIGHT_SONATA_ZWEI_MUSIC_DISC.get());
         basicItem(ModItems.MOONLIGHT_SONATA_DREI_MUSIC_DISC.get());

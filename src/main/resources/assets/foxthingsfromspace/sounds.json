@@ -86,5 +86,21 @@
         "stream": true
       }
     ]
+  },
+  "overture_the_wasps": {
+    "sounds": [
+      {
+        "name": "foxthingsfromspace:overture_the_wasps",
+        "stream": true
+      }
+    ]
+  },
+  "overture_1812": {
+    "sounds": [
+      {
+        "name": "foxthingsfromspace:overture_1812",
+        "stream": true
+      }
+    ]
   }
 }
